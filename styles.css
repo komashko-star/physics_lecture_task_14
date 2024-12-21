@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    font-family: Nunito, sans-serif;
+
+}
+
+body, html {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a:link {
+    color: #ccc;
+}
+a:visited {
+    color: #8a73d4;
+}
+a:hover {
+    color: #7383ef;
+}
+a:active {
+    color: #bd8ae9;
+}
+
+#header {
+    width: 100%;
+    height: 5em;
+    background-color: #2A4480;
+    text-align: center;
+}
+
+#body1 {
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+}
+
+#header_text {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #85C6E1;
+    padding-top: 0.5em;
+    margin-top: 0;
+}
+
+#border {
+    position: relative;
+    border: solid;
+    border-color: #2A4480;
+    width: 70%;
+    display: block;
+    padding: 0;
+}
+
+
+#object1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+#form {
+    padding: 10px;
+    border-color: #2A4480;
+    border-width: 3px;
+    border-style: solid;
+    border-right-width: 0px;
+    width: 30%;
+    line-height: 150%;
+    height: 80vh;
+    overflow-y: scroll
+    
+}
+
+button {
+    margin: 10px;
+    font-size: large;
+}
+
+#footer_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: auto;
+    background-color: #2A4480;
+    text-align: center;
+    padding-bottom: 1em;
+}
+#footer_div p {
+    height: 100%;
+    position: relative;
+    bottom: -1em;
+    width: 100%;
+    color: #85C6E1;
+    margin: 0;
+}
+
+#mainchart {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+
+}
+
+#chargeshower {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    font-size: 12pt;
+    padding: 5px;
+    background-color: gray;
+    display: none;
+    z-index: 2;
+    opacity: 80%;
+}
+
+#curtain {
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    padding: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2A4480;
+    color: #85C6E1;
+    font-size: xx-large;
+    z-index: 4;
+}
+
+#curtain p {
+    padding: 70px 0;
+}
+
+.exponent_input {
+    width: 55px;
+}
+input {
+    width: 110px;
+}
+
+#color_settings {
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.colorsq {
+    width: 9pt;
+    height: 9pt;
+    border: 1px solid #000;
+}
+
+.colorrow {
+    display: flex;
+    margin: 3px;
+    font-size: 9pt;
+    align-items: center; 
+}
+
+.colorrow p {
+    padding: 0;
+    margin: 0;
+}
+
+#colorsq1 {
+    background-color: hsl(0, 80%, 50%);
+}
+#colorsq2 {
+    background-color: hsl(75, 80%, 50%);
+}
+#colorsq3 {
+    background-color: hsl(150, 80%, 50%);
+}
+#colorsq4 {
+    background-color: hsl(225, 80%, 50%);
+}
+#colorsq5 {
+    background-color: hsl(300, 80%, 50%);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Моделирование</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <h1 id="header_text">Моделирование электростатического поля</h1>
+      </div>
+
+
+      <div id="body1">
+        
+      <div id="curtain"><p>Загрузка</p></div>
+
+      <div id="form">
+        <form id="collisionForm">    
+          Ширина видимой области: <label for="x_domain">w</label> = <input type="number" step="0.001" value="10" id="x_domain" class="exponent_input" required> м <br/>
+          
+          Плотность стрелок: 1 на <input type="number" value="30" id="arrowdensity" class="exponent_input" required> пикселей<br/>
+
+          Отображать эквипотенциальные поверхности каждые <input type="number" value="3" id="potentialStep" class="exponent_input" required> В<br/>
+
+          Не показывать стрелку, если напряженность меньше:
+          <input type="number" step="0.001" value="1" id="dontshowbound" class="exponent_input" required> x
+          10^<input type="number" step="1" value="-2" id="dontshowboundexp" class="exponent_input" required> В/м <br/>
+
+          <div id="color_settings">
+            <div>
+              <div class="colorrow"><div class="colorsq" id="colorsq1"></div> <p id="colorsq1value">0</p>  В/м </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq2"></div> <p id="colorsq2value"></p>  В/м </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq3"></div> <p id="colorsq3value"></p>  В/м </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq4"></div> <p id="colorsq4value"></p>  В/м </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq5"></div> <input type="number" step="0.001" value="5" id="colorsq5value" class="exponent_input" required> x
+              10^<input type="number" step="1" value="0" id="colorsq5exp" class="exponent_input" required> В/м </div>
+            </div>
+          </div>  
+          
+          <button type="submit">Перестроить график</button><br/>
+
+          <div id="chargesForm">
+            1 заряд: <br/> 
+            
+            <label for="x_0">x<sub>0</sub></label> = <input type="number" step="0.001" value="0" id="x_0" class="exponent_input" required> м;
+            <label for="y_0">y<sub>0</sub></label> = <input type="number" step="0.001" value="0" id="y_0" class="exponent_input" required> м <br/>
+                
+            <label for="q_0">q<sub>0</sub></label> = <input type="number" step="0.001" value="1" id="q_0" class="exponent_input" required> x 
+            10^<input type="number" step="1" value="-9" id="q_0_exp" class="exponent_input" required> Кл <br/>
+          </div>
+
+          <button id="addCharge" type="button">Добавить заряд</button><button id="addDipole" type="button">Добавить диполь</button><br/>
+
+
+
+        </form>
+
+      </div>
+      <div id="border">
+        <canvas id="mainchart"></canvas>
+        <div id="chargeshower"></div>
+      </div>
+  
+      </div>
+  
+      <div id="footer_div">
+        <p>Исходный код: <a href="https://github.com/komashko-star/physics_lecture_task_13">https://github.com/komashko-star/physics_lecture_task_13</a></p>
+      </div>
+
+  </body>
+</html>
