@@ -17,23 +17,33 @@
       <div id="curtain"><p>Загрузка</p></div>
 
       <div id="form">
-        <form id="collisionForm">    
-          Ширина видимой области: <label for="x_domain">w</label> = <input type="number" step="0.001" value="10" id="x_domain" class="exponent_input" required> м <br/>
-          
+        <form id="collisionForm">
+          <label for="E">E</label> = (
+          <input type="number" step="0.001" value="1" id="E_x" class="exponent_input" required> x 
+          10^<input type="number" step="1" value="0" id="E_x_exp" class="exponent_input" required> В/м, <br/>
+          <input type="number" step="0.001" value="1" id="E_y" class="exponent_input" required> x 
+          10^<input type="number" step="1" value="0" id="E_y_exp" class="exponent_input" required> В/м)<br/>
+
           Плотность стрелок: 1 на <input type="number" value="30" id="arrowdensity" class="exponent_input" required> пикселей<br/>
 
-          Отображать эквипотенциальные поверхности каждые <input type="number" value="3" id="potentialStep" class="exponent_input" required> В<br/>
+          <input type="checkbox" id="fieldStrength" name="forceType" value="fieldStrength" checked/> <label for="fieldStrength">Показывать вектора напряженности</label> <br/>
+          
+          <input type="checkbox" id="electricDisplacement" name="forceType" value="electricDisplacement" /> <label for="electricDisplacement">Показывать вектора индукции</label> <br/>
 
           Не показывать стрелку, если напряженность меньше:
           <input type="number" step="0.001" value="1" id="dontshowbound" class="exponent_input" required> x
           10^<input type="number" step="1" value="-2" id="dontshowboundexp" class="exponent_input" required> В/м <br/>
 
+          Не показывать стрелку, если индукция меньше:
+          <input type="number" step="0.001" value="1" id="dontshowdisplacementbound" class="exponent_input" required> x
+          10^<input type="number" step="1" value="-11" id="dontshowbounddisplacementexp" class="exponent_input" required> Кл/м<sup>2</sup> <br/>
+
           <div id="color_settings">
             <div>
-              <div class="colorrow"><div class="colorsq" id="colorsq1"></div> <p id="colorsq1value">0</p>  В/м </div>
-              <div class="colorrow"><div class="colorsq" id="colorsq2"></div> <p id="colorsq2value"></p>  В/м </div>
-              <div class="colorrow"><div class="colorsq" id="colorsq3"></div> <p id="colorsq3value"></p>  В/м </div>
-              <div class="colorrow"><div class="colorsq" id="colorsq4"></div> <p id="colorsq4value"></p>  В/м </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq1"></div> <p id="colorsq1value">0</p> </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq2"></div> <p id="colorsq2value"></p> </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq3"></div> <p id="colorsq3value"></p> </div>
+              <div class="colorrow"><div class="colorsq" id="colorsq4"></div> <p id="colorsq4value"></p> </div>
               <div class="colorrow"><div class="colorsq" id="colorsq5"></div> <input type="number" step="0.001" value="5" id="colorsq5value" class="exponent_input" required> x
               10^<input type="number" step="1" value="0" id="colorsq5exp" class="exponent_input" required> В/м </div>
             </div>
@@ -51,7 +61,7 @@
             10^<input type="number" step="1" value="-9" id="q_0_exp" class="exponent_input" required> Кл <br/>
           </div>
 
-          <button id="addCharge" type="button">Добавить заряд</button><button id="addDipole" type="button">Добавить диполь</button><br/>
+          <button id="addEnvironment" type="button">Добавить среду</button><br/>
 
 
 
@@ -66,7 +76,7 @@
       </div>
   
       <div id="footer_div">
-        <p>Исходный код: <a href="https://github.com/komashko-star/physics_lecture_task_13">https://github.com/komashko-star/physics_lecture_task_13</a></p>
+        <p>Исходный код: <a href="https://github.com/komashko-star/physics_lecture_task_14">https://github.com/komashko-star/physics_lecture_task_14</a></p>
       </div>
 
   </body>
